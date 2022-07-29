@@ -1,0 +1,12 @@
+<h1>USER REGISTRATION</h1>
+<div>
+    <form #userForm1="ngForm" (ngSubmit)="onSubmit(userForm1.value)">
+<div>
+        UserName <input type="text" placeholder="Enter your name" name="Name" ngModel></div>
+        <div> Password <input type="text" placeholder="Enter your password" name="password" ngModel></div>
+        <div> EmployeeId <input type="text" placeholder="Enter EmployeeId" name="EmployeeId" ngModel></div>
+
+        
+        <button type="submit" value="submit">Add User</button>
+    </form>
+</div>

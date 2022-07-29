@@ -1,0 +1,14 @@
+<div>
+
+    <button type="button" class="btn btn-success"
+
+    (click)="sendData()">Send Post Command</button>
+
+    <div>
+        <ul *ngFor="let data of users">
+            <li>{{data.name}}</li>
+        </ul>
+
+    </div>
+
+</div>

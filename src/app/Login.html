@@ -1,0 +1,27 @@
+<h3>ADMIN LOGIN</h3>
+<div class="login">
+    <form #taskForm1="ngForm" (ngSubmit)="check(taskForm1.value)">
+      <div class="form-group">
+        <label for="validationDefault01">USERNAME<span>:</span></label>
+      <input type="text" class="form-control" id="name" name="name"  required ngModel />
+      </div>
+
+
+      <div class="form-group">
+        <label for="validationDefault02">PASSWORD<span>:</span></label>
+        <input type="password" class="form-control" id="password" name="password"  required ngModel />
+      </div>
+
+
+      <div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+      
+    </form>
+   
+    
+</div>
+<div>
+  <a routerLink="/Register" class="btn btn-success mx-2" routerLinkActive="active">Registration</a>
+
+</div>

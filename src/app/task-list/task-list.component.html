@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  
+<div class="nav-item">
+  <button routerLink="/statuscheck" class="btn btn-success mx-2">SearchByStatus</button>
+</div>
+<div class="nav-item">
+  <button routerLink="/setpriority" class="btn btn-success mx-2">set Priority</button>
+</div><br>
+<div class="nav-item">
+  <button routerLink="/setbookmark" class="btn btn-success mx-2">set Bookmark</button>
+</div>
+<div class="nav-item">
+  <button routerLink="/createtask" class="btn btn-success mx-2">Create Task</button>
+</div>
+<div class="nav-item">
+  <button routerLink="/setnotes" class="btn btn-success mx-2">Add notes</button>
+</div>
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2> List Of Task</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>TaskID</th>
+              <th>OwnerID</th>
+              <th>CreatorID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Status</th>
+              <th>Priority</th>
+              <th>Notes</th>
+              <th>IsBookmarked</th>
+              <th>CreatedOn</th>
+              <th>StatusChangedOn</th>
+              
+  
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tro of task | async">
+             <td>{{tro.taskId}}</td>
+             <td>{{tro.ownerId}}</td>
+             <td>{{tro.creatorId}}</td>
+             <td>{{tro.name}}</td>
+             <td>{{tro.description}}</td>
+             <td>{{tro.status}}</td>
+             <td>{{tro.priority}}</td>
+             <td>{{tro.notes}}</td>
+             <td>{{tro.isBookmarked}}</td>
+             
+             <td>{{tro.createdOn}}</td>
+             <td>{{tro.statusChangedOn}}</td>
+             
+  
+             
+            
+           
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
